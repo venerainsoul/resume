@@ -1,0 +1,105 @@
+<div>
+  <main>
+    <section>
+      <div>
+        <dl>
+          <dt><h1>{{name}}</h1></dt>
+          <br />
+          <dd><em>{{description}}</em></dd>
+        </dl>
+      </div>
+      <br />
+      <div>
+        {{#with history}}
+          <p>(Founder:
+            <b>{{founder}}</b>, in
+            <b>{{year}}</b>)</p>
+        {{/with}}
+      </div>
+    </section>
+    <hr />
+    <section>
+      <div>
+        <ul>
+          {{> title data='Types' big=true}}
+          {{#each types}}
+            <li><span class="badge text-bg-light">{{this}}</span></li>
+          {{/each}}
+        </ul>
+      </div>
+    </section>
+    <br />
+    <hr />
+    <section>
+      <div>
+        {{#with syntax}}
+          <ul>
+            {{> title data='Syntax' big=true}}
+            <br />
+            <ul>
+              <p><em>Variables:</em></p> 
+              {{#each variables}}
+                <li><span class="badge text-bg-secondary">{{this}}</span></li>
+              {{/each}}
+              <br />
+              <p><em>Functions:</em></p> 
+              {{#each functions}}
+                <li><span class="badge text-bg-secondary">{{this}}</span></li>
+              {{/each}}
+              <br />
+              <p><em>Conditionals:</em></p> 
+              {{#each conditionals}}
+                <li><span class="badge text-bg-secondary">{{this}}</span></li>
+              {{/each}}
+              <br />
+              <p><em>Loops:</em></p> 
+              {{#each loops}}
+                <li><span class="badge text-bg-secondary">{{this}}</span></li>
+              {{/each}}
+              <br />
+              <p><em>Classes:</em></p> 
+              {{#each classes}}
+                <li><span class="badge text-bg-secondary">{{this}}</span></li>
+              {{/each}}
+            </ul>
+          </ul>
+        {{/with}}
+      </div>
+  </section>
+  <hr />
+  <section>
+    <div>
+      <ul>
+        {{> title data='Futures' big=true}}
+        <br />
+        {{#each features}}
+          <li><span class="badge text-bg-dark">{{this}}</span></li>
+        {{/each}}
+        <br />
+        {{> title data='Libraries' big=true}}
+        <br />
+        {{#each libraries}}
+          <li><span class="badge text-bg-dark">{{this}}</span></li>
+        {{/each}}
+        <br />
+        {{> title data='Tools' big=true}}
+        <br />
+        {{#each tools}}
+          <li><span class="badge text-bg-dark">{{this}}</span></li>
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+  <hr />
+  <section>
+    <div>
+      <ul>
+        {{> title data='Community' big=true}}
+        {{#each community}} 
+          <li><span class="badge text-bg-info">{{name}}</span> <span class="badge text-bg-light">{{type}}</span></li>
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+  </main>
+</div>
