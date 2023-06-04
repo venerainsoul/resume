@@ -1,0 +1,146 @@
+<div>
+  <main>
+    <section>
+      <div>
+        <dl>
+          <dt><h1>{{name}}</h1></dt>
+          <br />
+          <dd><em>{{description}}</em></dd>
+        </dl>
+        <p><b>Price:</b>
+          <span
+            class='badge text-bg-success'
+          >{{price}}</span>
+        </p>
+        <p><b>Category:</b>
+          <span
+            class='badge text-bg-success'
+          >{{category}}</span>
+        </p>
+      </div>
+    </section>
+    <hr />
+    <section>
+      {{> title data='Features' big=true}}
+      {{#with features}}
+        <ul>
+          <hr />
+          {{#with processor}}
+            {{> title data='Processor:'}}
+            <ul>
+              <li><b>Brand:</b> <span class="badge text-bg-primary">{{brand}}</span></li>
+              <li><b>Model:</b> <span class="badge text-bg-primary">{{model}}</span></li>
+              <li><b>Speed:</b> <span class="badge text-bg-primary">{{speed}}</span></li>
+              <li><b>Cores:</b> <span class="badge text-bg-primary">{{cores}}</span></li>
+              <li><b>Cache:</b> <span class="badge text-bg-primary">{{cache}}</span></li>
+            </ul>
+          {{/with}}
+          <hr />
+          <br />
+          {{#with memory}}
+            {{> title data='Memory:'}}
+            <ul>
+              <li><b>Type:</b> <span class="badge text-bg-primary">{{type}}</span></li>
+              <li><b>Size:</b> <span class="badge text-bg-primary">{{size}}</span></li>
+              <li><b>Speed:</b> <span class="badge text-bg-primary">{{speed}}</span></li>
+            </ul>
+          {{/with}}
+          <hr />
+          <br />
+          {{#with storage}}
+            {{> title data='Storage:'}}
+            <ul>
+              <li><b>Type:</b> <span class="badge text-bg-primary">{{type}}</span></li>
+              <li><b>Size:</b> <span class="badge text-bg-primary">{{size}}</span></li>
+            </ul>
+          {{/with}}
+          <hr />
+          <br />
+          {{#with display}}
+            {{> title data='Display:'}}
+            <ul>
+              <li><b>Size:</b> <span class="badge text-bg-primary">{{size}}</span></li>
+              <li><b>Resolution:</b> <span class="badge text-bg-primary">{{resolution}}</span></li>
+              <li><b>Technology:</b> <span class="badge text-bg-primary">{{technology}}</span></li>
+              <li><b>Color space:</b> <span class="badge text-bg-primary">{{color_space}}</span></li>
+              <li><b>Brightness:</b> <span class="badge text-bg-primary">{{brightness}}</span></li>
+              <li><b>Refresh rate:</b> <span class="badge text-bg-primary">{{refresh_rate}}</span></li>
+            </ul>
+          {{/with}}
+          <hr />
+          <br />
+          {{#with graphics}}
+            {{> title data='Graphics:'}}
+            <ul>
+              <li><b>Brand:</b> <span class="badge text-bg-primary">{{brand}}</span></li>
+              <li><b>Model:</b> <span class="badge text-bg-primary">{{model}}</span></li>
+              <li><b>Memory:</b> <span class="badge text-bg-primary">{{memory}}</span></li>
+            </ul>
+          {{/with}}
+          <hr />
+          <br />
+          {{> title data='Ports:'}}
+          <ul>
+            {{#each ports}}
+              <li><b>Type:</b> <span class="badge text-bg-primary">{{type}}</span></li>
+              <li><b>Count:</b> <span class="badge text-bg-primary">{{count}}</span></li>
+              {{#if features}}
+              <li><b>Features:</b></li>
+                <ul>
+                  {{#each features}}
+                    <li><span class="badge text-bg-primary">{{this}}</span></li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+              <br />
+            {{/each}}
+          </ul>
+          <hr />
+          {{#with battery}}
+            {{> title data='Battery:'}}
+            <ul>
+              <li><b>Type:</b> <span class="badge text-bg-primary">{{type}}</span></li>
+              <li><b>Capacity:</b> <span class="badge text-bg-primary">{{capacity}}</span></li>
+              <li><b>Life:</b> <span class="badge text-bg-primary">{{life}}</span></li>
+            </ul>
+          {{/with}}
+          <hr />
+          <br />
+          <div>
+            {{> title data='Weight:'}}
+            <ul>
+              <li><b>Weight:</b> <span class="badge text-bg-primary">{{weight}}</span></li>
+            </ul>
+          </div>
+          <hr />
+          <br />
+          {{#with dimensions}}
+            {{> title data='Dimensions:'}}
+            <ul>
+              <li><b>Height:</b> <span class="badge text-bg-primary">{{height}}</span></li>
+              <li><b>Width:</b> <span class="badge text-bg-primary">{{width}}</span></li>
+              <li><b>Depth:</b> <span class="badge text-bg-primary">{{depth}}</span></li>
+            </ul>
+          {{/with}}
+          <hr />
+          <br />
+          <div>
+            {{> title data='Operating system:'}}
+            <ul>
+              <li><b>Operating system:</b> <span class="badge text-bg-primary">{{operating_system}}</span></li>
+            </ul>
+          </div>
+          <hr />
+          <br />
+          {{> title data='Accessories:'}}
+          <ul>
+            {{#each accessories}}
+              <li><b>Name:</b> <span class="badge text-bg-primary">{{name}}</span> <b>Price:</b> <span class="badge text-bg-info">{{price}}</span></li>
+              <br />
+            {{/each}}
+          </ul>
+        </ul>
+      {{/with}}
+    </section>
+  </main>
+</div>
