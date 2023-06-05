@@ -1,0 +1,124 @@
+<main>
+  <section>
+    {{#with page_header}}
+      <h1 class='text-center'>{{title}}</h1>
+      <br />
+      <p
+        class='text-center text-uppercase'
+      >{{description}}</p>
+    {{/with}}
+  </section>
+
+  {{#with section}}
+    <section>
+      {{#with about_us}}
+        <div class='card'>
+          <div class='card-body'>
+            <div
+              class='display-6 text-end'
+            >{{title_list.main}}
+            </div>
+            <br />
+            <h2 class='text-end'>{{title_list.sub}}</h2>
+            <br />
+            <button
+              class='btn btn-outline-info'
+            >{{button.text}}</button>
+          </div>
+        </div>
+      {{/with}}
+    </section>
+    <br />
+    <section>
+      {{#with advantage}}
+        <div class='card'>
+          <div class='card-body'>
+            <div class='display-5'>{{title}}</div>
+            <br />
+            {{#with efficiency}}
+              <div class='card'>
+                <div class='card-body'>
+                  <div class='display-4'>{{title}}</div>
+                  <br />
+                  <h6>{{sub_title}}</h6>
+                  <br />
+                  <p>{{description}}</p>
+                  <br />
+                  <button
+                    class='btn btn-outline-warning'
+                  >{{button}}</button>
+                </div>
+              </div>
+            {{/with}}
+            <br />
+            {{#with innovation}}
+              <div class='card'>
+                <div class='card-body'>
+                  <div
+                    class='display-4 text-center'
+                  >{{title}}</div>
+                  <br />
+                  <h6 class='text-center'>{{sub_title}}</h6>
+                  <br />
+                  <p class='text-center'>{{description}}</p>
+                  <br />
+                  <button
+                    class='btn btn-outline-warning'
+                  >{{button}}</button>
+                </div>
+              </div>
+            {{/with}}
+            <br />
+            {{#with collaboration}}
+              <div class='card'>
+                <div class='card-body'>
+                  <div
+                    class='display-4 text-end'
+                  >{{title}}</div>
+                  <br />
+                  <h6 class='text-end'>{{sub_title}}</h6>
+                  <br />
+                  <p class='text-end'>{{description}}</p>
+                  <br />
+                  <button
+                    class='btn btn-outline-warning'
+                  >{{button}}</button>
+                </div>
+              </div>
+            {{/with}}
+          </div>
+        </div>
+      {{/with}}
+    </section>
+    <br />
+    <section>
+      {{#with agreement}}
+        <div class='card'>
+          <div class='card-body'>
+            <div class='display-5'>{{title}}</div>
+            <br />
+            {{#with info}}
+              <div class='card'>
+                <div class='card-body'>
+                  <h5>{{sub_title}}</h5>
+                  <br />
+                  {{#with detail}}
+                    <div class='card'>
+                      <div class='card-body'>
+                        <p>{{text}}</p>
+                        <br />
+                        <button
+                          class='btn btn-success'
+                        >{{button}}</button>
+                      </div>
+                    </div>
+                  {{/with}}
+                </div>
+              </div>
+            {{/with}}
+          </div>
+        </div>
+      {{/with}}
+    </section>
+  {{/with}}
+</main>
